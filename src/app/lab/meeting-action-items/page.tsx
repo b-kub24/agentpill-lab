@@ -33,7 +33,7 @@ function findOwner(sentence: string): string {
   if (m && !OWNER_STOPWORDS.has(m[1].split(" ")[0])) return m[1];
   m = sentence.match(/^\s*(?:action|todo|task)\s*[:\-]\s*([A-Z][a-z]+)\s+to\b/i);
   if (m && !OWNER_STOPWORDS.has(m[1])) return m[1];
-  return "â";
+  return "—";
 }
 
 function findDeadline(sentence: string): string {
@@ -41,7 +41,7 @@ function findDeadline(sentence: string): string {
   if (m) return m[1].trim();
   const k = sentence.match(DEADLINE_KW_RE);
   if (k) return k[1].trim();
-  return "â";
+  return "—";
 }
 
 function inferPriority(sentence: string, deadline: string): Priority {
@@ -63,7 +63,7 @@ function extractActions(text: string): ActionItem[] {
   for (const s of sentences) {
     if (!TRIGGER_RE.test(s)) continue;
     const action = s
-      .replace(/^\s*[-*â¢]\s*/, "")
+      .replace(/^\s*[-*•]\s*/, "")
       .replace(/^(action|todo|to-do|task)\s*[:\-]\s*/i, "")
       .trim();
     if (action.length < 8) continue;
@@ -129,13 +129,13 @@ export default function Page() {
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-orange-100 max-w-2xl mx-auto">
             Paste your meeting notes. Get a clean table of action items, owners,
-            deadlines, and priorities â in seconds. No AI keys, no uploads.
+            deadlines, and priorities — in seconds. No AI keys, no uploads.
           </p>
           <a
             href="#tool"
             className="mt-8 inline-block rounded-lg bg-white px-8 py-3 font-semibold text-orange-600 shadow-lg hover:bg-orange-100 transition"
           >
-            Extract Actions Free â
+            Extract Actions Free →
           </a>
         </div>
       </section>
@@ -144,7 +144,7 @@ export default function Page() {
       <section className="mx-auto max-w-3xl px-4 py-12 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">What is this?</h2>
         <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-          Never lose an action item again. Paste your raw meeting notes or transcript and instantly get a clean table of action items with owners, deadlines, and priority levels â extracted automatically.
+          Never lose an action item again. Paste your raw meeting notes or transcript and instantly get a clean table of action items with owners, deadlines, and priority levels — extracted automatically.
         </p>
       </section>
 
@@ -153,17 +153,17 @@ export default function Page() {
         <h2 className="text-center text-2xl sm:text-3xl font-bold text-gray-900 mb-10">How it works</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-2xl">ð</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-2xl">📝</div>
               <h3 className="text-lg font-bold text-gray-900">1. Paste your notes</h3>
               <p className="mt-2 text-gray-600">Drop in meeting notes, transcripts, or even rough bullet points.</p>
             </div>
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-2xl">â¡</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-2xl">⚡</div>
               <h3 className="text-lg font-bold text-gray-900">2. Click Extract</h3>
               <p className="mt-2 text-gray-600">Our parser identifies action verbs, names, dates, and urgency signals.</p>
             </div>
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-2xl">â</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-2xl">✅</div>
               <h3 className="text-lg font-bold text-gray-900">3. Export & assign</h3>
               <p className="mt-2 text-gray-600">Copy the structured table as Markdown for Notion, Slack, or your PM tool.</p>
             </div>
@@ -177,7 +177,7 @@ export default function Page() {
         <div className="rounded-2xl bg-white p-6 sm:p-8 shadow-xl">
           <h2 className="text-2xl font-bold">Paste your meeting notes</h2>
           <p className="mt-1 text-sm text-gray-500">
-            We scan for commitments like &quot;Sarah willâ¦&quot;, &quot;Action:&quot;,
+            We scan for commitments like &quot;Sarah will…&quot;, &quot;Action:&quot;,
             &quot;follow up&quot;, &quot;by Friday&quot;, and more.
           </p>
           <textarea
@@ -206,14 +206,14 @@ export default function Page() {
                     onClick={handleCopy}
                     className="rounded-lg border border-orange-600 px-4 py-2 text-sm font-semibold text-orange-600 hover:bg-orange-50 transition"
                   >
-                    {copied ? "â Copied!" : "Copy as Markdown"}
+                    {copied ? "✓ Copied!" : "Copy as Markdown"}
                   </button>
                 )}
               </div>
               {items.length === 0 ? (
                 <p className="mt-4 text-sm text-gray-500">
-                  No action items detected. Try phrasing like &quot;Alex willâ¦&quot;
-                  or &quot;TODO: â¦&quot;.
+                  No action items detected. Try phrasing like &quot;Alex will…&quot;
+                  or &quot;TODO: …&quot;.
                 </p>
               ) : (
                 <div className="mt-4 overflow-x-auto rounded-lg border border-gray-200">
@@ -263,7 +263,7 @@ export default function Page() {
           </div>
           {joined ? (
             <p className="mt-6 font-semibold text-green-700">
-              ð You&apos;re on the list! We&apos;ll be in touch.
+              🎉 You&apos;re on the list! We&apos;ll be in touch.
             </p>
           ) : (
             <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
@@ -286,7 +286,7 @@ export default function Page() {
       </section>
 
       <footer className="border-t border-orange-200 bg-white py-6 text-center text-sm text-gray-500">
-        Â© 2025 Meeting Action Extractor. All rights reserved.
+        © 2025 Meeting Action Extractor. All rights reserved.
       </footer>
     </main>
   );
