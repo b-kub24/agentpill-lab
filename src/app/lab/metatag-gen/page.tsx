@@ -116,7 +116,7 @@ export default function Home() {
             <div className="text-center">
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">✅</div>
               <h3 className="text-lg font-bold text-gray-900">3. Copy & paste</h3>
-              <p className="mt-2 text-gray-600">One click copies everything to your clipboard. Drop it in your <head> tag.</p>
+              <p className="mt-2 text-gray-600">One click copies everything to your clipboard. Drop it in your &lt;head&gt; tag.</p>
             </div>
         </div>
       </section>
