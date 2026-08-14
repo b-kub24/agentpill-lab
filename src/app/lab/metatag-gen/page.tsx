@@ -72,7 +72,7 @@ export default function Home() {
       <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800 text-white">
         <div className="mx-auto max-w-5xl px-4 py-20 sm:py-28 text-center">
           <span className="inline-block rounded-full bg-white/10 px-4 py-1 text-sm font-medium tracking-wide backdrop-blur">
-            Free SEO tool â no signup required
+            Free SEO tool — no signup required
           </span>
           <h1 className="mt-6 text-4xl sm:text-6xl font-extrabold tracking-tight">
             MetaTag Generator
@@ -86,7 +86,7 @@ export default function Home() {
             href="#tool"
             className="mt-8 inline-block rounded-xl bg-white px-8 py-3.5 text-base font-semibold text-indigo-700 shadow-lg hover:bg-indigo-50 transition"
           >
-            Generate My Tags â
+            Generate My Tags →
           </a>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default function Home() {
       <section className="mx-auto max-w-3xl px-4 py-12 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">What is this?</h2>
         <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-          Stop guessing at meta tags. Paste your page details and get perfectly formatted HTML meta tags, Open Graph tags, and Twitter cards â ready to copy into your site. Every link you share will look polished on Google, Facebook, X, and LinkedIn.
+          Stop guessing at meta tags. Paste your page details and get perfectly formatted HTML meta tags, Open Graph tags, and Twitter cards — ready to copy into your site. Every link you share will look polished on Google, Facebook, X, and LinkedIn.
         </p>
       </section>
 
@@ -104,17 +104,17 @@ export default function Home() {
         <h2 className="text-center text-2xl sm:text-3xl font-bold text-gray-900 mb-10">How it works</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">ð</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">📝</div>
               <h3 className="text-lg font-bold text-gray-900">1. Enter your details</h3>
               <p className="mt-2 text-gray-600">Fill in your page title, description, URL, and optional image.</p>
             </div>
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">â¡</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">⚡</div>
               <h3 className="text-lg font-bold text-gray-900">2. Click Generate</h3>
               <p className="mt-2 text-gray-600">We build production-ready HTML with all the tags you need.</p>
             </div>
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">â</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">✅</div>
               <h3 className="text-lg font-bold text-gray-900">3. Copy & paste</h3>
               <p className="mt-2 text-gray-600">One click copies everything to your clipboard. Drop it in your <head> tag.</p>
             </div>
@@ -137,7 +137,7 @@ export default function Home() {
                 className={inputClass}
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="My Awesome Product â Do More in Less Time"
+                placeholder="My Awesome Product — Do More in Less Time"
               />
             </div>
             <div className="sm:col-span-2">
@@ -146,7 +146,7 @@ export default function Home() {
                 className={inputClass + " min-h-[90px]"}
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                placeholder="A compelling 150â160 character summary of your page..."
+                placeholder="A compelling 150–160 character summary of your page..."
               />
             </div>
             <div>
@@ -193,7 +193,7 @@ export default function Home() {
                   onClick={copy}
                   className="rounded-lg bg-indigo-100 px-5 py-2 text-sm font-semibold text-indigo-700 hover:bg-indigo-200 transition"
                 >
-                  {copied ? "â Copied!" : "Copy to Clipboard"}
+                  {copied ? "✓ Copied!" : "Copy to Clipboard"}
                 </button>
               </div>
               <pre className="mt-3 overflow-x-auto rounded-xl bg-gray-900 p-5 text-sm leading-relaxed text-indigo-200">
@@ -209,9 +209,9 @@ export default function Home() {
         {/* Features */}
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {[
-            ["â¡ Instant", "No waiting, no accounts. Your tags are generated locally in your browser."],
-            ["ð Every platform", "Google, Facebook, X/Twitter, LinkedIn, Slack, Discord â covered."],
-            ["ð Private", "Nothing leaves your device. Zero tracking of your page data."],
+            ["⚡ Instant", "No waiting, no accounts. Your tags are generated locally in your browser."],
+            ["🔗 Every platform", "Google, Facebook, X/Twitter, LinkedIn, Slack, Discord — covered."],
+            ["🔒 Private", "Nothing leaves your device. Zero tracking of your page data."],
           ].map(([t, d]) => (
             <div key={t} className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-100">
               <h3 className="font-semibold text-indigo-700">{t}</h3>
@@ -234,14 +234,14 @@ export default function Home() {
               $7<span className="text-lg font-medium text-gray-500">/mo</span>
             </div>
             <ul className="mt-5 space-y-2 text-left text-sm text-gray-600">
-              <li>â Unlimited saved projects</li>
-              <li>â Bulk CSV generation</li>
-              <li>â Live Facebook / X / LinkedIn previews</li>
-              <li>â JSON-LD structured data builder</li>
+              <li>✓ Unlimited saved projects</li>
+              <li>✓ Bulk CSV generation</li>
+              <li>✓ Live Facebook / X / LinkedIn previews</li>
+              <li>✓ JSON-LD structured data builder</li>
             </ul>
             {joined ? (
               <p className="mt-6 rounded-lg bg-indigo-50 py-3 font-medium text-indigo-700">
-                ð You&apos;re on the list! We&apos;ll be in touch.
+                🎉 You&apos;re on the list! We&apos;ll be in touch.
               </p>
             ) : (
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -265,7 +265,7 @@ export default function Home() {
       </section>
 
       <footer className="bg-gray-900 py-8 text-center text-sm text-gray-400">
-        Â© 2025 MetaTag Generator. All rights reserved.
+        © 2025 MetaTag Generator. All rights reserved.
       </footer>
     </main>
   );
