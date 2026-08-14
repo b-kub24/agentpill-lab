@@ -10,7 +10,7 @@ const LEVELS: Record<string, { years: string; scope: string; verbs: string[] }> 
 };
 
 const WORK: Record<string, string> = {
-  remote: "This is a fully remote position â work from anywhere with a strong internet connection.",
+  remote: "This is a fully remote position — work from anywhere with a strong internet connection.",
   hybrid: "This is a hybrid role, blending in-office collaboration with remote flexibility.",
   onsite: "This is an onsite role based at our office, where you'll collaborate closely with the team.",
 };
@@ -50,9 +50,9 @@ export default function Page() {
       ? skillList.map((s) => `Proficiency with ${s}`)
       : [`Demonstrated experience relevant to the ${title} role`];
 
-    const text = `# ${title}\n${company} Â· ${d.charAt(0).toUpperCase() + d.slice(1)} Â· ${levelName} Â· ${work.charAt(0).toUpperCase() + work.slice(1)}${salary.trim() ? ` Â· ${salary.trim()}` : ""}\n
+    const text = `# ${title}\n${company} · ${d.charAt(0).toUpperCase() + d.slice(1)} · ${levelName} · ${work.charAt(0).toUpperCase() + work.slice(1)}${salary.trim() ? ` · ${salary.trim()}` : ""}\n
 ## About ${company}
-At ${company}, we believe great products are built by great people. We're a passionate, fast-moving team on a mission to deliver exceptional value to our customers â and we're just getting started. Joining ${company} means joining a culture of ownership, curiosity, and craft, where your work matters from day one.\n
+At ${company}, we believe great products are built by great people. We're a passionate, fast-moving team on a mission to deliver exceptional value to our customers — and we're just getting started. Joining ${company} means joining a culture of ownership, curiosity, and craft, where your work matters from day one.\n
 ## Role Overview
 We're looking for a ${levelName} ${title} to join ${d}. In this role, you'll ${L.scope}. ${WORK[work]}${salary.trim() ? ` The compensation range for this role is ${salary.trim()}.` : ""}\n
 ## Key Responsibilities
@@ -75,7 +75,7 @@ ${must.map((m) => `- ${m}`).join("\n")}
 - Home office / equipment budget
 - Team offsites and regular social events\n
 ## Our Commitment to Diversity, Equity & Inclusion
-${company} is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We welcome applicants of every background, identity, and experience â if you're excited about this role but don't meet every requirement, we encourage you to apply anyway.\n
+${company} is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We welcome applicants of every background, identity, and experience — if you're excited about this role but don't meet every requirement, we encourage you to apply anyway.\n
 ## How to Apply
 Send your resume (and anything else you'd like us to see) through our careers page or to careers@${company.toLowerCase().replace(/[^a-z0-9]/g, "")}.com. We review every application and aim to respond within one week. We can't wait to meet you!`;
 
@@ -107,8 +107,8 @@ Send your resume (and anything else you'd like us to see) through our careers pa
         <div className="mx-auto max-w-3xl">
           <span className="mb-4 inline-block rounded-full bg-white/15 px-4 py-1 text-xs font-semibold uppercase tracking-wider">Hiring made easy</span>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">JD Writer</h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-violet-100">Generate polished, inclusive job descriptions in seconds. Fill in the basics â we handle the rest.</p>
-          <a href="#tool" className="mt-8 inline-block rounded-xl bg-white px-8 py-3 font-semibold text-violet-700 shadow-lg transition hover:bg-violet-100">Write a Job Description â</a>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-violet-100">Generate polished, inclusive job descriptions in seconds. Fill in the basics — we handle the rest.</p>
+          <a href="#tool" className="mt-8 inline-block rounded-xl bg-white px-8 py-3 font-semibold text-violet-700 shadow-lg transition hover:bg-violet-100">Write a Job Description →</a>
         </div>
       </section>
 
@@ -116,7 +116,7 @@ Send your resume (and anything else you'd like us to see) through our careers pa
       <section className="mx-auto max-w-3xl px-4 py-12 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">What is this?</h2>
         <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-          Write a complete, professional job description in under 60 seconds. Enter the role details and get a polished JD with responsibilities, requirements, benefits, and a DEI statement â ready to post on any job board.
+          Write a complete, professional job description in under 60 seconds. Enter the role details and get a polished JD with responsibilities, requirements, benefits, and a DEI statement — ready to post on any job board.
         </p>
       </section>
 
@@ -125,17 +125,17 @@ Send your resume (and anything else you'd like us to see) through our careers pa
         <h2 className="text-center text-2xl sm:text-3xl font-bold text-gray-900 mb-10">How it works</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-2xl">ð</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-2xl">📝</div>
               <h3 className="text-lg font-bold text-gray-900">1. Enter role details</h3>
               <p className="mt-2 text-gray-600">Job title, company, level, work type, and key skills needed.</p>
             </div>
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-2xl">â¡</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-2xl">⚡</div>
               <h3 className="text-lg font-bold text-gray-900">2. Click Generate</h3>
               <p className="mt-2 text-gray-600">We build a complete JD with 8 sections tailored to the experience level.</p>
             </div>
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-2xl">â</div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-2xl">✅</div>
               <h3 className="text-lg font-bold text-gray-900">3. Copy & post</h3>
               <p className="mt-2 text-gray-600">Copy the formatted text and paste it into LinkedIn, Indeed, or your ATS.</p>
             </div>
@@ -180,7 +180,7 @@ Send your resume (and anything else you'd like us to see) through our careers pa
             </div>
             <div>
               <label className={labelCls}>Salary Range (optional)</label>
-              <input className={inputCls} value={salary} onChange={(e) => setSalary(e.target.value)} placeholder="e.g. $120kâ$150k" />
+              <input className={inputCls} value={salary} onChange={(e) => setSalary(e.target.value)} placeholder="e.g. $120k–$150k" />
             </div>
             <div className="sm:col-span-2">
               <label className={labelCls}>Key Skills (comma-separated)</label>
@@ -196,7 +196,7 @@ Send your resume (and anything else you'd like us to see) through our careers pa
               <div className="mb-3 flex items-center justify-between">
                 <h3 className="text-lg font-bold">Your Job Description</h3>
                 <button onClick={copy} className="rounded-lg bg-violet-100 px-4 py-2 text-sm font-semibold text-violet-700 transition hover:bg-violet-200">
-                  {copied ? "â Copied!" : "Copy as Text"}
+                  {copied ? "✓ Copied!" : "Copy as Text"}
                 </button>
               </div>
               <pre className="max-h-[32rem] overflow-auto whitespace-pre-wrap rounded-xl border border-violet-100 bg-violet-50/60 p-5 text-sm leading-relaxed">{output}</pre>
@@ -208,10 +208,10 @@ Send your resume (and anything else you'd like us to see) through our careers pa
       {/* Pricing / Waitlist */}
       <section className="px-4 pb-20">
         <div className="mx-auto max-w-xl rounded-2xl bg-gradient-to-br from-violet-700 to-purple-800 p-8 text-center text-white shadow-xl sm:p-10">
-          <h2 className="text-2xl font-bold">Pro Plan â $9/mo</h2>
+          <h2 className="text-2xl font-bold">Pro Plan — $9/mo</h2>
           <p className="mt-2 text-violet-200">Unlimited JDs, custom templates, ATS-ready exports, and team sharing. Coming soon.</p>
           {joined ? (
-            <p className="mt-6 rounded-xl bg-white/15 py-3 font-semibold">ð You're on the list! We'll be in touch.</p>
+            <p className="mt-6 rounded-xl bg-white/15 py-3 font-semibold">🎉 You're on the list! We'll be in touch.</p>
           ) : (
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@company.com" className="flex-1 rounded-xl border-0 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-fuchsia-300" />
@@ -222,7 +222,7 @@ Send your resume (and anything else you'd like us to see) through our careers pa
       </section>
 
       <footer className="border-t border-violet-100 bg-white py-6 text-center text-sm text-gray-500">
-        Â© 2025 JD Writer. All rights reserved.
+        © 2025 JD Writer. All rights reserved.
       </footer>
     </main>
   );
